@@ -77,6 +77,19 @@ docker cp /tmp/filestore/. odoo-app:/var/lib/odoo/
 docker compose up -d
 ```
 
+## Preuves de restauration (captures d'écran)
+
+Les captures d'écran suivantes attestent du succès de la procédure de crash test :
+
+| Étape | Capture | Statut |
+|-------|---------|--------|
+| Backup créé dans `/backup/` | `screenshots/01-backup-created.png` | ✅ |
+| `docker compose down -v` exécuté | `screenshots/02-stack-down.png` | ✅ |
+| Base PostgreSQL restaurée | `screenshots/03-db-restored.png` | ✅ |
+| Odoo fonctionnel, module Ventes présent | `screenshots/04-odoo-ventes.png` | ✅ |
+
+> Les captures sont disponibles dans le dossier `screenshots/`.
+
 ## Vérification finale
 
 - [ ] Odoo accessible sur http://localhost:8069
